@@ -1,4 +1,5 @@
 Sales Forecasting with Linear Regression
+
 Overview
 This project demonstrates a simple sales forecasting solution using a Linear Regression model. It involves loading sales data, performing essential data preprocessing, feature engineering, training a linear regression model, and visualizing the actual, predicted, and forecasted sales.
 
@@ -8,12 +9,18 @@ The project utilizes a 'Sample - Superstore.csv' dataset, which contains sales a
 Methodology
 The forecasting process involves the following steps:
 
-Data Loading: The dataset is loaded into a pandas DataFrame, with 'Order Date' parsed as datetime objects.
+Data Loading: The dataset is loaded into a pandas DataFrame, with 'Order Date' parsed as datetime objects. 
+
 Data Cleaning: Missing values are handled by dropping rows, and the data is sorted by 'Order Date' to prepare for time-series analysis.
+
 Feature Engineering: New time-based features (year, month, day, day of week) are extracted from the 'Order Date'. Monthly sales are aggregated using resample('ME').
+
 Model Training: A LinearRegression model from sklearn is trained on the monthly sales data, using a time index as the independent variable.
+
 Prediction and Forecasting: The trained model generates predictions for a test set and forecasts sales for future periods.
+
 Visualization: The actual sales, test set predictions, and future forecasts are plotted to provide a clear overview of the model's performance and future outlook.
+
 Model
 The core of the forecasting is a LinearRegression model, chosen for its simplicity and interpretability in demonstrating basic time-series forecasting concepts.
 
